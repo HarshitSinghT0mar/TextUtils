@@ -56,7 +56,7 @@ export default function TextForm(props) {
         {console.log(typeof text)}
 
         <p className="my-2">
-          {text.split(' ').length} words and {text.length} characters
+          {text.split(/[,.\s]/g).filter((e)=> {return e.length!==0;}).length} words and {text.length} characters
         </p>
         <h3>Preview</h3>
         <p
